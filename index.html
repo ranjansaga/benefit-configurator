@@ -40,14 +40,14 @@
           </div>
         </div>
         <div
-          class="col-3"
+          class="col-3 coverage-section-container"
           ng-show="showCoverageSection">
           <div class="search-benefits">
             <i
               class="fa fa-search"
               aria-hidden="true"></i>
             <input
-              placeholder="Search benefits"
+              placeholder="Search Benefits"
               type="text"
               name="search"
               ng-model="benefitSearchString">
@@ -55,6 +55,13 @@
           <div ng-repeat="coverage in coverageList | filter:benefitSearchString | orderBy:'displaySequence' track by $index">
             <coverage>
             </coverage>
+          </div>
+          <div class="add-coverage-wrapper">
+            <div class="add-coverage-icon">
+              <div>
+                <i class="fa fa-plus"></i>
+              </div>
+            </div>
           </div>
         </div>
         <div class="col-6">
