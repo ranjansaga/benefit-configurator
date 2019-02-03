@@ -1,0 +1,255 @@
+/* generic css */
+.app-container {
+  font-family: 'Karla', sans-serif;
+}
+
+.app-container .row {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.app-container .col-3,
+.app-container .col-5,
+.app-container .col-6,
+.app-container .col-7 {
+  margin-left: 0px;
+  margin-right: 0px;
+  padding-left: 0px;
+  padding-right: 0px; 
+}
+
+.flex-container {
+    display: flex
+}
+
+/* hide the dropdown icon for select in IE*/
+select::-ms-expand {
+    display: none;
+}
+
+/* hide the dropdown icon for select */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: '';
+}
+
+/* product section */
+.product-header {
+  background: #fff;
+  color: #5f5656;
+  padding: 22px;
+}
+
+.product-container {
+  color: #2d2c2c;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.active {
+  background: #4D7CFE;
+  color: #fff;
+}
+
+/* coverage section  */
+.search-benefits {
+  padding: 20px;
+  background: #FCFBFB;
+  border-top: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+.search-benefits input {
+  border: none;
+  outline: none;
+  background: #FCFBFB;
+  width: 85%;
+}
+
+.coverage-container {
+  padding: 20px;
+  background: #FCFBFB;
+  border-top: 1px solid #eaeaea;
+  border-right: 1px solid #eaeaea;
+}
+
+.coverage-icon-wrapper {
+  width: 22%;
+  padding: 0px 10px;
+}
+
+.coverage-icon {
+  width: 100%;
+  content: "";
+  display: block;
+  height:0;
+  padding-bottom: 100%;
+  -moz-border-radius: 50%; 
+  -webkit-border-radius: 50%; 
+  border-radius: 50%;
+}
+
+.coverage-icon div {
+  float:left;
+  width:100%;
+  padding-top:50%;
+  line-height:1em;
+  margin-top:-0.5em;
+  text-align:center;
+  color:white;
+}
+
+.coverage-name {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.coverage-description {
+  font-size: 13px;
+  color: #8a7e7e;;
+}
+
+/* attribute category section */
+.attribute-category-container {
+  padding: 50px 40px 10px 40px;
+}
+
+.attribute-category-title {
+  font-size: 25px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.attribute-category-error-message-container {
+  padding: 12px 20px;
+}
+
+.attribute-category-error-message-icon {
+  font-size: 0;
+}
+
+.attribute-category-error-message-icon .fa {
+  font-size: 30px;
+  color: #DF4141;
+}
+
+.attribute-category-error-message {
+  background: #e6e6e6;
+  font-size: 14px;
+  vertical-align: super;
+  padding: 5px 15px;
+  color: #524f4f;
+}
+
+.prod-category-container {
+  padding: 15px 0px 10px 0px;
+}
+
+.prod-category-label {
+  font-size: 18px;
+  color: #5f5656;
+  padding-left: 13px;
+  font-weight: bold;
+}
+
+.prod-category-input-container {
+  padding: 0px 40px 0px 15px;
+}
+
+/* product attribute section */
+.product-attribute-container {
+  padding: 15px 0px;
+}
+
+.product-attribute-label {
+  font-size: 12px;
+  color: #5f5656;
+  padding-left: 15px;
+  text-transform: uppercase;
+}
+
+.product-attr-icon {
+  font-size: 15px;
+  font-weight: bold;
+  padding-right: 10px;
+}
+
+.app-container .product-input-container {
+  padding: 0px 40px 0px 10px;
+}
+
+.form-input {
+  width: 100%;
+  font-size: 14px;
+  height: 4vh;
+  border: none;
+  background: #fff;
+  border-bottom: 1px solid #eaeaea;
+  outline: none;
+}
+
+/* code for switch button */
+.switch {
+  margin-top: 4px;
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 12px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 9px;
+  left: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(15px);
+  -ms-transform: translateX(15px);
+  transform: translateX(15px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 16px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}

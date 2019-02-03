@@ -1,0 +1,67 @@
+<script src="https://use.fontawesome.com/bafba7551e.js"></script>
+<div class="product-attribute-container">
+  <div
+    ng-if="productAttribute.inputType && 
+           productAttribute.inputType==='dropdown'"
+    class="row">
+    <div class="col-6">
+      <div class="product-attribute-label">
+        <span class="product-attr-icon">
+          <i class="fa fa-shield"></i>
+        </span>
+        <span>{{ productAttribute.label }}</span>
+      </div>
+    </div>
+    <div class="col-6 product-input-container">
+      <select
+        class="form-input"
+        ng-init="productAttribute.userInput = productAttribute.values[getDefaultIndexFromValue(productAttribute, productAttribute.userValues, productAttribute.values)]"
+        ng-model="productAttribute.userInput"
+        ng-options="item.label for item in productAttribute.values">
+      </select>
+    </div>
+  </div>
+  <div
+    ng-if="productAttribute.inputType &&
+           productAttribute.inputType==='text'"
+    class="row">
+    <div class="col-6">
+      <div class="product-attribute-label">
+        <span class="product-attr-icon">
+          <i class="fa fa-hdd-o"></i>
+        </span>
+        <span>{{ productAttribute.label }}</span>
+      </div>
+    </div>
+    <div class="col-6 product-input-container">
+      <input
+        ng-init="productAttribute.userInput = productAttribute.userValues"
+        ng-model="productAttribute.userInput"
+        class="form-input"
+        type="text"/>
+    </div>
+  </div>
+  <div
+    ng-if="productAttribute.inputType &&
+           productAttribute.inputType==='checkbox'"
+      class="row">
+    <div class="col-6">
+      <div class="product-attribute-label">
+        <span class="product-attr-icon">
+          <i class="fa fa-bars"></i>
+        </span>
+        <span>{{ productAttribute.label }}</span>
+      </div>
+    </div>
+    <div class="col-6 product-input-container">
+        <label class="switch">
+          <input
+            ng-init="productAttribute.userInput = productAttribute.userValues"
+            ng-model="productAttribute.userInput"
+            type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+  </div>
+</div>
+

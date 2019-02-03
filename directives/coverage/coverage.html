@@ -1,0 +1,19 @@
+<div
+  class="flex-container coverage-container"
+  ng-click="getAttributeCategoriesForCoverage({ coverage: coverage })">
+    <div class="coverage-icon-wrapper">
+      <div
+        ng-style="{'background': randomColorsList[$index]}"
+        class="coverage-icon">
+        <div>{{ getCoverageIconText(coverage.Name) }}</div>
+      </div>
+    </div>
+    <div class="coverage-text-container">
+      <div class="coverage-name">
+         {{ coverage.Name }}
+      </div>
+      <div class="coverage-description">
+        In-Network | Out-of-Network
+      </div>
+    </div>
+</div>

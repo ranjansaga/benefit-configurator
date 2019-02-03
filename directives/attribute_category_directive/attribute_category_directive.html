@@ -1,0 +1,78 @@
+<div class="attribute-category-container">
+  <div class="attribute-category-title">
+    {{ attributeCategory.Name }}
+  </div>
+  <div ng-if="attributeCategory.productAttributes &&
+                attributeCategory.productAttributes.records">
+    <div class="row">
+      <div class="col-6">
+        <div class="flex-container prod-category-container">
+          <div class="prod-category-label">
+            In-Network
+          </div>
+          <div class="prod-category-input-container">
+            <label class="switch">
+              <input
+                ng-init="attributeCategory.InNetwork=true"
+                ng-model="attributeCategory.InNetwork"
+                type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div ng-if="attributeCategory.InNetwork">
+          <div ng-repeat="productAttribute in attributeCategory.productAttributes.records | orderBy: 'displaySequence' | filter:'In-Network'">
+            <product-attribute-directive 
+              product-attribute="productAttribute">
+            </product-attribute-directive>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+        <div class="flex-container prod-category-container">
+          <div class="prod-category-label">
+            Out-of-Network
+          </div>
+          <div class="prod-category-input-container">
+            <label class="switch">
+              <input
+                ng-init="attributeCategory.OutOfNetwork=true"
+                ng-model="attributeCategory.OutOfNetwork"
+                type="checkbox">
+              <span class="slider round"></span>
+            </label>
+          </div>
+        </div>
+        <div ng-if="attributeCategory.OutOfNetwork">
+          <div ng-repeat="productAttribute in attributeCategory.productAttributes.records | orderBy: 'displaySequence' | filter:'Out-of-Network'">
+          <product-attribute-directive 
+            product-attribute="productAttribute">
+          </product-attribute-directive>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div
+          ng-if="!attributeCategory.InNetwork"
+          class="attribute-category-error-message-container">
+          <span class="attribute-category-error-message-icon">
+            <i class="fa fa-window-close"></i>
+          </span>
+          <span class="attribute-category-error-message">
+            In Network is not available for {{ attributeCategory.Name }}
+          </span>
+        </div>
+        <div
+          ng-if="!attributeCategory.OutOfNetwork"
+          class="attribute-category-error-message-container">
+          <span class="attribute-category-error-message-icon">
+            <i class="fa fa-window-close"></i>
+          </span>
+          <span class="attribute-category-error-message">
+            Out of Network is not available for {{ attributeCategory.Name }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
